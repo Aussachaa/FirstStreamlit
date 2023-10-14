@@ -34,7 +34,7 @@ col1, col2 = st.columns((2))
 # Getting the min and max date
 
 with col1:
-    date1 = pd.to_datetime(st.date_input("Start Date"))
+    date1 = pd.to_datetime(st.date_input("Start Date", '2023/10/14'))
 
 with col2:
-    date2 = pd.to_datetime(st.date_input("End Date"))
+    date2 = pd.to_datetime(st.date_input("End Date", '2033/10/14'))
