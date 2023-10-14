@@ -37,8 +37,8 @@ col1, col2 = st.columns((2))
 
 with col1:
     date1 = pd.to_datetime(st.date_input(
-        "Start Date", datetime.date(2023, 10, 14)))
+        "Start Date", datetime.date(2013, 10, 14)))
 
 with col2:
     date2 = pd.to_datetime(st.date_input(
-        "End Date", datetime.date(2033, 10, 14)))
+        "End Date", datetime.date(2043, 10, 14)))
