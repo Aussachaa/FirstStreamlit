@@ -33,7 +33,7 @@ col1, col2 = st.columns((2))
 # df["Order Date"] = pd.to_datetime(df["Order Date"])
 
 # Getting the min and max date
-startDate = pd.to_datetime(df["Order Date"]).min()
-endDate = pd.to_datetime(df["Order Date"]).max()
+startDate = pd.to_datetime(df["Order Date"], cache=False).dt.date.min()
+# endDate = pd.to_datetime(df["Order Date"]).max()
 
 st.write(startDate)
