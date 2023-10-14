@@ -28,6 +28,6 @@ else:
     df = pd.read_csv(path_file, encoding="ISO-8859-1")
 
 col1, col2 = st.columns((2))
-df["Order Date"] = pd.to_datetime(df["Order Date"]).dt.date
+df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=False).dt.date
 
 st.write(df)
