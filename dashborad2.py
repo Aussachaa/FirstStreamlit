@@ -28,8 +28,8 @@ else:
     df = pd.read_csv(path_file, encoding="ISO-8859-1")
 
 col1, col2 = st.columns((2))
-df["Order Date"] = pd.to_datetime(df["Order Date"], format=None, cache=True)
+df["Order Date"] = pd.to_datetime(df["Order Date"], errors='coerce')
 
 # Getting the min and max date
-startDate = pd.to_datetime(df["Order Date"], format=None, cache=True).min()
-endDate = pd.to_datetime(df["Order Date"], format=None, cache=True).max()
+startDate = pd.to_datetime(df["Order Date"], errors='coerce').min()
+endDate = pd.to_datetime(df["Order Date"], errors='coerce').max()
