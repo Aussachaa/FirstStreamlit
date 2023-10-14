@@ -30,10 +30,13 @@ else:
 st.write(df)
 
 col1, col2 = st.columns((2))
-# df["Order Date"] = pd.to_datetime(df["Order Date"])
 
 # Getting the min and max date
-startDate = df["Order Date"]
-# endDate = pd.to_datetime(df["Order Date"]).max()
+startDate = pd.to_datetime(df["Order Date"]).min()
+endDate = pd.to_datetime(df["Order Date"]).max()
 
-st.write(startDate)
+with col1:
+    date1 = pd.to_datetime(st.date_input("Start Date", startDate))
+
+with col2:
+    date2 = pd.to_datetime(st.date_input("End Date", endDate))
