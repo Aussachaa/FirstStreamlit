@@ -31,5 +31,5 @@ col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"], format="%d/%m/%y")
 
 # Getting the min and max date
-startDate = pd.to_datetime(df["Order Date"], format="%d/%m/%y").min()
-endDate = pd.to_datetime(df["Order Date"], format="%d/%m/%y").max()
+startDate = pd.to_datetime(df["Order Date"]).min()
+endDate = pd.to_datetime(df["Order Date"]).max()
